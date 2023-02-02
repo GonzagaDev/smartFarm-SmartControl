@@ -3,8 +3,8 @@
 #include "Thread.h"
 #include "ThreadController.h"
 
-#define botaoReset 2
-int valorBotao =0;
+#define botaoReset 38
+int valorBotao = 0;
 Config config;
 Alimentador alimentador;
 
