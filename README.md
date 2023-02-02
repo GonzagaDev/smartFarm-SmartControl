@@ -1,1 +1,1 @@
-# smartFarm-SmartControl
+# SmartFarm - SmartControl
