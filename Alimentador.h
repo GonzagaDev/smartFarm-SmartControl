@@ -21,12 +21,13 @@ class Alimentador {
   static const int qtdschedulers = 6;                                                                       // OBRIGATÓRIO INFORMAR A QUANTIDADE DE AGENDAMENTOS+
   char* agendamentosAlimentador[qtdschedulers] = { "12:43", "12:44", "12:45", "12:46", "22:53", "22:54" };  // INFORMAR OS AGENDAMENTOS
   uint8_t minuto_ultima_exec;
+  int timerAlimemtador =10000; // tempo que o alimentador ficará liogado em cada ciclo
 
 
 public:
   Alimentador() {
     ligaAlimentador.onRun(on);
-    desligaAlimentador.setInterval(10000);
+    desligaAlimentador.setInterval(timerAlimemtador);
     desligaAlimentador.onRun(off);
   }
 
