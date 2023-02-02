@@ -48,8 +48,7 @@ public:
         String minuto = getScheduler(i).getMinute();
         if (hora == String(now.hour())) {
           if (minuto == String(now.minute())) {
-            minuto_ultima_exec = now.minute();
-            ligaAlimentador.run();
+            exec(now.minute());
           }
         }
       }
@@ -69,5 +68,10 @@ public:
     reles.off(0);
     desligaAlimentador.enabled = false;
     addLogConsole("Desligou o relé");
+  }
+
+  void exec(uint8_t lastExecution){
+    minuto_ultima_exec = lastExecution;
+    ligaAlimentador.run();
   }
 };
