@@ -7,6 +7,7 @@
 int valorBotao = 0;
 Config config;
 Alimentador alimentador;
+uint8_t minuto_ultima_exec;
 
 void setup() {
   pinMode(botaoReset,INPUT);
@@ -21,7 +22,10 @@ void loop() {
  if(valorBotao){
   // simular ciclo alimentador
   DateTime now = rtc.now();
-  alimentador.exec(now.minute());
+  if(minuto_ultima_exec != now.minute()){
+    minuto_ultima_exec = now.minute();
+    alimentador.exec(minuto_ultima_exec);
+  }
  }
 }
 

@@ -18,10 +18,10 @@ Thread ligaAlimentador;
 Thread desligaAlimentador;
 
 class Alimentador {
-  static const int qtdschedulers = 6;                                                                       // OBRIGATÓRIO INFORMAR A QUANTIDADE DE AGENDAMENTOS+
-  char* agendamentosAlimentador[qtdschedulers] = { "12:43", "12:44", "12:45", "12:46", "22:53", "22:54" };  // INFORMAR OS AGENDAMENTOS
+  static const int qtdschedulers = 4;                                                                       // OBRIGATÓRIO INFORMAR A QUANTIDADE DE AGENDAMENTOS+
+  char* agendamentosAlimentador[qtdschedulers] = { "7:15", "10:15", "14:15"};  // INFORMAR OS AGENDAMENTOS. EX. (7:0) (12:0) (12:10)
   uint8_t minuto_ultima_exec;
-  int timerAlimemtador =10000; // tempo que o alimentador ficará liogado em cada ciclo
+  int timerAlimemtador =3000; // tempo que o alimentador ficará liogado em cada ciclo
 
 
 public:

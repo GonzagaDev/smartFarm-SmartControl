@@ -29,7 +29,7 @@ public:
       //     // January 21, 2014 at 3am you would call:
       //    //rtc.adjust(DateTime(2023, 2, 1, 21, 50, 0));
          }
-        // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+      //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
       reles.setup();
      Serial.println("FIM DO SETUP");
   };
